@@ -1,3 +1,6 @@
+// entry point for Node.js web server code
+// Express Getting Started: http://expressjs.com/starter/installing.html
+
 var express = require('express');
 var db = require('./db');
 

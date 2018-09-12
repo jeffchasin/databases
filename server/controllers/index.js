@@ -1,3 +1,5 @@
+// defines the messages and users controllers that your app will use
+
 var models = require('../models');
 
 module.exports = {
