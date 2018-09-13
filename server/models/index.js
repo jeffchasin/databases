@@ -64,8 +64,15 @@ module.exports = {
       connection.end();
     },
     // TODO:
-    post: function () { }
+    post: function (user) {
+      connection.query('INSERT INTO users (username) VALUES (?)', [user], function (error, results, fields) {
+        if (error) {
+          console.error('users.post connection.query error: ', error);
+        }
+      });
+      connection.end();
+    }
   }
 };
 
-module.exports.messages.post(1, 'Test poster msg', 'office');
+module.exports.users.post('Testy McTester');
